@@ -1,0 +1,97 @@
+.event-details-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 50px;
+  margin-top: 115px;
+}
+
+.event-details-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.event-details-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-info, .event-sponsors {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.event-info {
+  text-align: left;
+}
+
+.event-info p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.event-info p strong {
+  color: #333;
+}
+
+.event-sponsors {
+  text-align: left;
+}
+
+.event-sponsors ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.event-sponsors li {
+  margin: 5px 0;
+  color: #555;
+}
+
+.event-divider {
+  width: 1px;
+  background-color: #ddd;
+  height: auto;
+  margin: 0 20px;
+}
+
+.event-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.event-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+  color: #fff;
+}
+
+.participate-button {
+  background-color: #28a745;
+}
+
+.participate-button:hover {
+  background-color: #218838;
+}
+
+.sponsor-button {
+  background-color: #007bff;
+}
+
+.sponsor-button:hover {
+  background-color: #0056b3;
+}

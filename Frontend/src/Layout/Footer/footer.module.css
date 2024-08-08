@@ -1,0 +1,30 @@
+.customImage {
+  height: 100px;
+  width: 100px;
+  outline: none;
+  position: absolute;
+  left: 140px;   
+  top: 70px; 
+    }
+    
+.footerDiv {
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  background-color: blueviolet;
+  position: relative;       
+    }
+    
+    .footerText {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+    
+    @media (max-width: 767px) {
+      .footerText {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }

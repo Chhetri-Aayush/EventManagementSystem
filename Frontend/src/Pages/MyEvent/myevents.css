@@ -1,0 +1,102 @@
+.my-events-container {
+    padding: 20px;
+    margin-top: 5rem;
+    min-height: 100vh;
+  }
+
+  .my-events-container h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+  }
+
+  .my-events-container p{
+    color: #7f8c8d;
+  }
+  
+  .event-cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .event-card {
+    width: 18rem;
+    background: white;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    margin-right: 15px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .event-card-body {
+    padding: 15px;
+  }
+  
+  .event-card-name {
+    margin: 0;
+    font-size: 19px;
+    color: #39364f;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  .event-card-description {
+    margin: 0;
+    font-size: 16px;
+    color: #39364f;
+    text-align: left;
+    font-weight: 430;
+  }
+  
+  .event-card-date-and-time,
+  .event-card-location {
+    margin: 0;
+    font-size: 16px;
+    color: #39364f;
+    text-align: left;
+    font-weight: 430;
+  }
+  
+  .event-card-venue {
+    margin: 0;
+    font-size: 16px;
+    color: #39364f;
+    text-align: left;
+    font-weight: 430;
+  }
+  
+  .event-card-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .event-card-button:hover {
+    background-color: #0056b3;
+  }
+  

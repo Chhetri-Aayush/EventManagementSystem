@@ -1,0 +1,39 @@
+.fullscreen {
+    position: fixed;          
+    top: 0;                   
+    left: 0;                  
+    width: 100vw;             
+    height: 100vh;            
+    display: flex;            
+    align-items: center;      
+    justify-content: center;  
+    z-index: 1050;            
+  }
+  
+  .customDialog {
+    max-width: 500px; 
+    background: linear-gradient(313deg,#ffffff 0%,#d7e1ec);
+    border-radius: 15px;
+  }
+  
+  .customContent{
+    width: 100%; 
+  }
+
+  .customSignUp{
+    position: relative;
+    left: 100px;
+  }
+  
+  .customButton{
+    width: 151px;
+    cursor: pointer;
+    position: relative;
+    left: 75px;
+    margin-top: 16px;
+  }
+
+  .customQuestion{
+    position: relative;
+    left:17px;
+  }

@@ -1,0 +1,66 @@
+.icon-category-browse {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 200px;
+}
+
+.icon-category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  text-decoration: none;
+  color: #39364f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.icon-category-card:hover .icon-wrapper {
+  background-color: #e8e7ea;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  color: #39364f;
+  transition: color 0.3s ease;
+}
+
+.icon-category-card:hover .icon {
+  color: #2c2a38;
+}
+
+.icon-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.icon-category-card:hover .icon-title {
+  color: #2c2a38;
+}

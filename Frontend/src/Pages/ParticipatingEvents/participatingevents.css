@@ -1,0 +1,44 @@
+
+.participating-events-container {
+    margin-top:4rem;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      min-height: 100vh;
+    }
+    
+    .participating-events-container h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+    
+    .participating-events-container ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .participating-events-container li {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    
+    .participating-events-container li:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+    }
+    
+    .participating-events-container h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #3498db;
+    }
+    
+    .participating-events-container p {
+      margin: 0.5rem 0;
+      color: #7f8c8d;
+    }
+    
