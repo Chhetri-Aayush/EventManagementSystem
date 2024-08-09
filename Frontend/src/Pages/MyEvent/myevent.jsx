@@ -13,8 +13,6 @@ const MyEvents = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
- 
-
   const handleEdit = (eventId) => {
     navigate(`/editEvent/${eventId}`);
   };
@@ -22,8 +20,8 @@ const MyEvents = () => {
   const handleDelete = async (eventId) => {
     await deleteEvent(eventId);
   };
- console.log(userEvents);
-  if (userEvents.length === 0) {
+  console.log(userEvents);
+  if (userEvents.length == 0) {
     return (
       <div className="my-events-container">
         <h1>My Events</h1>
@@ -63,7 +61,7 @@ const MyEvents = () => {
                 <h2 className="event-card-name">{event.name}</h2>
                 <p className="event-card-description">{event.description}</p>
                 <p className="event-card-date-and-time">
-                  Date: {new Date(event.event_date).toLocaleDateString()} 
+                  Date: {new Date(event.event_date).toLocaleDateString()}
                   Time: {formatTime(event.event_time)}
                 </p>
                 <p className="event-card-venue">Location: {event.venue}</p>

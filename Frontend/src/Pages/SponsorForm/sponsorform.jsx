@@ -7,7 +7,7 @@ import { useEvents } from "../../Store/EventContext";
 
 const SponsorForm = () => {
   const { eventId } = useParams();
-  const { fetchEvents, fetchuserEvents } = useEvents();
+  const { fetchEvents, fetchUserEvents } = useEvents();
   const navigate = useNavigate();
   const {
     register,
@@ -36,7 +36,7 @@ const SponsorForm = () => {
 
       if (response.ok) {
         await fetchEvents();
-        await fetchuserEvents();
+        await fetchUserEvents();
         alert("You have successully Sponsored this event");
         navigate("/");
       } else {
