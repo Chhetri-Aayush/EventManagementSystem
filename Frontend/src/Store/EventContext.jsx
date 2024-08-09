@@ -14,7 +14,7 @@ export const EventProvider = ({ children }) => {
   const fetchEvents = async () => {
     try {
       const response = await fetch(
-        "https://backend-f2bi.onrender.com/events/get_events/"
+        `https://backend-f2bi.onrender.com/events/get_events/`
       );
       const data = await response.json();
       setEvents(data.events);
