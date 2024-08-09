@@ -37,7 +37,7 @@ const SponsorForm = () => {
       if (response.ok) {
         await fetchEvents();
         await fetchuserEvents();
-        toast.success("Event Sponsored Successfull!");
+        alert("You have successully Sponsored this event");
         navigate("/");
       } else {
         const errorData = await response.json();
