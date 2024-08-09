@@ -5,10 +5,9 @@ import "react-toastify/dist/ReactToastify.css";
 import "./sponsorform.css";
 import { useEvents } from "../../Store/EventContext";
 
-
 const SponsorForm = () => {
   const { eventId } = useParams();
-  const {fetchEvents,fetchuserEvents}=useEvents();
+  const { fetchEvents, fetchuserEvents } = useEvents();
   const navigate = useNavigate();
   const {
     register,
@@ -24,7 +23,7 @@ const SponsorForm = () => {
     }
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/sponsors/${eventId}/`,
+        `https://backend-f2bi.onrender.com/sponsors/${eventId}/`,
         {
           method: "POST",
           headers: {
@@ -36,7 +35,6 @@ const SponsorForm = () => {
       );
 
       if (response.ok) {
-        
         await fetchEvents();
         await fetchuserEvents();
         toast.success("Event Sponsored Successfull!");

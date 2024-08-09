@@ -5,7 +5,6 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -16,12 +15,10 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
- 
-
   const fetchUserInfo = async (token) => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/authentication/userInfo/",
+        "https://backend-f2bi.onrender.com/authentication/userInfo/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -46,7 +43,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/authentication/login/",
+        "https://backend-f2bi.onrender.com/authentication/login/",
         {
           method: "POST",
           headers: {
@@ -74,7 +71,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, loading}}>
+    <AuthContext.Provider value={{ user, login, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );

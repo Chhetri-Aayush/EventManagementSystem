@@ -3,22 +3,20 @@ import styles from "./signup.module.css";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 function SignUp() {
-  
   const {
     register,
     handleSubmit,
     formState: { errors },
-    
   } = useForm();
   const navigate = useNavigate();
 
   const onSubmitData = async (data) => {
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/authentication/register/",
+        "https://backend-f2bi.onrender.com/authentication/register/",
         {
           method: "POST",
           headers: {
@@ -31,8 +29,6 @@ function SignUp() {
 
       if (response.ok) {
         toast.success("Verification mail sent!");
-        
-   
       } else {
         toast.error(result.message || "Registration failed. Please try again.");
       }
@@ -42,11 +38,10 @@ function SignUp() {
   };
   return (
     <>
-      <ToastContainer/>
+      <ToastContainer />
       <div className={`${styles.fullscreen}`}>
         <div className={`${styles.customDialog}`} role="document">
           <div className={`${styles.customContent} rounded-4 shadow`}>
-            
             <div className="modal-header p-5 pb-4 border-bottom-0">
               <h1 className={`fw-bold mb-0 fs-2 ${styles.customSignUp}`}>
                 Sign up

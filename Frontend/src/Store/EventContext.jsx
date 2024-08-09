@@ -13,7 +13,9 @@ export const EventProvider = ({ children }) => {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/events/get_events/");
+      const response = await fetch(
+        "https://backend-f2bi.onrender.com/events/get_events/"
+      );
       const data = await response.json();
       setEvents(data.events);
     } catch (error) {
@@ -24,13 +26,16 @@ export const EventProvider = ({ children }) => {
   const fetchUserEvents = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://127.0.0.1:8000/events/my_events/`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `https://backend-f2bi.onrender.com/events/my_events/`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       const data = await response.json();
       setUserEvents(data.events);
     } catch (error) {
@@ -42,7 +47,7 @@ export const EventProvider = ({ children }) => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://127.0.0.1:8000/events/edit_event/${eventId}/`,
+        `https://backend-f2bi.onrender.com/events/edit_event/${eventId}/`,
         {
           method: "PUT",
           headers: {
@@ -63,7 +68,6 @@ export const EventProvider = ({ children }) => {
     }
   };
 
-
   const MakeEvents = async (data) => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -71,14 +75,17 @@ export const EventProvider = ({ children }) => {
       return;
     }
     try {
-      const response = await fetch("http://127.0.0.1:8000/events/create/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://backend-f2bi.onrender.com/events/create/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (response.ok) {
         await fetchEvents();
@@ -101,7 +108,7 @@ export const EventProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/events/delete_event/${eventId}/`,
+        `https://backend-f2bi.onrender.com/events/delete_event/${eventId}/`,
         {
           method: "DELETE",
           headers: {
@@ -119,7 +126,6 @@ export const EventProvider = ({ children }) => {
     } catch (error) {
       console.error("Error deleting event:", error);
     }
-
   };
 
   return (

@@ -23,7 +23,7 @@ const ParticipateForm = () => {
     }
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/participate/join/${eventId}/`,
+        `https://backend-f2bi.onrender.com/participate/join/${eventId}/`,
         {
           method: "POST",
           headers: {
@@ -37,9 +37,6 @@ const ParticipateForm = () => {
       if (response.ok) {
         reset();
         toast.success("Successfully participated!");
-       
-        
-        
       } else {
         const errorData = await response.json();
         console.error("Error participating:", errorData);

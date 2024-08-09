@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../Store/AuthContext";
 import { ToastContainer, toast } from "react-toastify";
@@ -18,16 +16,18 @@ const ParticipatingEvents = () => {
         return;
       }
       try {
-        const response = await fetch("http://127.0.0.1:8000/participate/my-events/", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await fetch(
+          "https://backend-f2bi.onrender.com/participate/my-events/",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (response.ok) {
-
           const data = await response.json();
           console.log(data);
           setEvents(data.events);
@@ -44,7 +44,7 @@ const ParticipatingEvents = () => {
 
     fetchParticipatingEvents();
   }, [user]);
-  
+
   const formatTime = (timeString) => {
     const [hours, minutes, seconds] = timeString.split(":");
     const date = new Date();

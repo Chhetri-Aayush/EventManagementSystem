@@ -17,7 +17,7 @@ const SponsoredEvents = () => {
       }
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/sponsors/get_sponsored_events/",
+          "https://backend-f2bi.onrender.com/sponsors/get_sponsored_events/",
           {
             method: "GET",
             headers: {
@@ -28,7 +28,6 @@ const SponsoredEvents = () => {
         );
 
         if (response.ok) {
-          
           const data = await response.json();
           setEvents(data.events);
         } else {
